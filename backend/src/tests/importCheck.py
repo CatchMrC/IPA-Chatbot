@@ -11,7 +11,7 @@ from src.database.chromadbClient import ChromaDBClient
 db_client = ChromaDBClient()
 
 # Einen bestimmten Datensatz abrufen
-record_id = "1"  # Ersetzen Sie dies mit der ID, die Sie überprüfen möchten
+record_id = "2"  # Ersetzen Sie dies mit der ID, die Sie überprüfen möchten
 result = db_client.collection.get(
     ids=[record_id],
     include=['metadatas', 'documents']

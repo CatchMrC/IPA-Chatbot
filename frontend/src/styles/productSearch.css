@@ -1,0 +1,12 @@
+.product-search-container {
+    margin-top: 20px;
+  }
+  
+  .card {
+    border: 1px solid var(--light-gray);
+    border-radius: 10px;
+  }
+  
+  .card-title {
+    color: var(--primary-color);
+  }

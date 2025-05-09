@@ -1,0 +1,15 @@
+.product-card {
+    margin: 10px 0;
+    border: 1px solid var(--light-gray);
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  }
+  
+  .product-card .card-title {
+    color: var(--primary-color);
+  }
+  
+  .product-card .btn {
+    background-color: var(--secondary-color);
+    color: white;
+  }
