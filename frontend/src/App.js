@@ -1,20 +1,13 @@
-import React from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import Chat from './pages/chat';
-import 'bootstrap/dist/css/bootstrap.min.css';
-import './styles/branding.css';
+import React from "react";
+import Chat from "./pages/chat";
+import "./styles/global.css";
 
-
-
-
-const App = () => {
-    return (
-        <Router>
-            <Routes>
-                <Route path="/" element={<Chat />} />
-            </Routes>
-        </Router>
-    );
-};
+function App() {
+  return (
+    <div className="App">
+      <Chat />
+    </div>
+  );
+}
 
 export default App;

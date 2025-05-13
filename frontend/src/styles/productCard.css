@@ -1,15 +1,209 @@
+.message.system {
+  max-width: 80%;
+  margin: var(--spacing-lg) auto;
+  background: var(--background);
+  color: var(--text-secondary);
+  font-style: italic;
+  border: 1px dashed var(--border-black);
+  text-align: center;
+  padding: 2rem;
+  border-radius: 12px;
+}
+
+/* Umschalt-Button für Produkte */
+.toggle-products-button {
+  padding: var(--spacing-sm) var(--spacing-lg);
+  background: var(--surface);
+  border: 1px solid var(--primary-light);
+  border-radius: var(--radius-md);
+  color: var(--primary);
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all var(--transition-normal);
+  margin: var(--spacing-md) auto;
+  display: block;
+}
+
+.toggle-products-button:hover {
+  background: var(--primary-light);
+  color: white;
+  transform: translateY(-2px);
+}
+
+.toggle-products-button:focus {
+  outline: 2px solid var(--primary);
+  outline-offset: 2px;
+}
+
+.toggle-products-button.active {
+  background: var(--primary);
+  color: white;
+  border-color: var(--primary);
+}
+
+/* Produktkarten-Raster */
+.products-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: var(--spacing-lg);
+  margin-top: var(--spacing-lg);
+}
+
+/* Einzelne Produktempfehlung - hervorgehoben */
+.products-grid:has(:only-child) .product-card {
+  max-width: 90%;
+  margin: 0 auto;
+  border: 2px solid var(--primary-light);
+  transform: scale(1.02);
+  box-shadow: var(--shadow-md);
+}
+
+.products-grid:has(:only-child) .product-card:hover {
+  transform: scale(1.04) translateY(-5px);
+}
+
+/* Produkt-Empfehlungs-Container */
+.product-recommendations {
+  margin-top: 1.5rem;
+  padding-top: 1rem;
+  border-top: 1px dashed var(--border);
+}
+
+/* Produktkarte */
 .product-card {
-    margin: 10px 0;
-    border: 1px solid var(--light-gray);
-    border-radius: 10px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-  }
-  
-  .product-card .card-title {
-    color: var(--primary-color);
-  }
-  
-  .product-card .btn {
-    background-color: var(--secondary-color);
-    color: white;
-  }
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: var(--spacing-lg);
+  box-shadow: var(--shadow-sm);
+  transition: all var(--transition-normal);
+  overflow: hidden;
+}
+
+.product-card:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-md);
+  border-color: var(--primary-light);
+}
+
+/* Produktkopfbereich */
+.product-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: var(--spacing-md);
+}
+
+.product-title {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  margin: 0;
+}
+
+.price {
+  font-size: 1.125rem;
+  font-weight: 700;
+  color: var(--success);
+}
+
+/* Produktspezifikationen */
+.product-specs {
+  margin-top: var(--spacing-md);
+  padding-top: var(--spacing-md);
+  border-top: 1px solid var(--border);
+}
+
+.spec-label {
+  font-weight: bold;
+  color: var(--text-secondary);
+  line-height: 1.5;
+}
+
+.card-section {
+  margin-bottom: var(--spacing-md);
+}
+
+.section-title {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--text-secondary);
+  margin-bottom: var(--spacing-sm);
+}
+
+.user-groups,
+.qualification-tag {
+  font-weight: normal;
+  color: var(--text-secondary);
+  line-height: 1.5;
+}
+
+/* Aktionsbutton */
+.action-button {
+  padding: var(--spacing-sm) var(--spacing-md);
+  background: var(--primary);
+  color: white;
+  border: none;
+  border-radius: var(--radius-md);
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all var(--transition-normal);
+  margin-top: var(--spacing-md);
+  text-align: center;
+}
+
+.action-button:hover {
+  background: var(--primary-dark);
+  transform: translateY(-2px);
+}
+
+.action-button:focus {
+  outline: 2px solid var(--primary);
+  outline-offset: 2px;
+}
+
+/* Beispiel-Buttons-Container */
+.examples {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--spacing-md);
+  justify-content: center;
+  margin-top: var(--spacing-lg);
+}
+
+/* Beispiel-Button Styling */
+.example-button {
+  padding: var(--spacing-sm) var(--spacing-md);
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  color: var(--text-primary);
+  font-size: 0.875rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all var(--transition-normal);
+  box-shadow: var(--shadow-sm);
+  text-align: center;
+}
+
+.example-button:hover {
+  background: var(--primary-light);
+  color: rgb(255, 255, 255);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
+}
+
+.example-button:focus {
+  outline: 2px solid var(--primary);
+  outline-offset: 2px;
+}
+
+.example-button:active {
+  transform: translateY(0);
+  box-shadow: var(--shadow-sm);
+}
