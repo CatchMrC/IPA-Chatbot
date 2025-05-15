@@ -61,33 +61,51 @@ const ChatSidebar = ({
     <>
       {/* Separater Toggle-Button für geschlossene Sidebar */}
       {!isOpen && (
-        <button
-          className="toggle-sidebar-button closed-sidebar-button"
-          onClick={onToggleSidebar}
-          aria-label="Open chat sidebar"
-          title="Open sidebar"
-        >
-          ☰
-        </button>
+        <div className="sidebar-toggle-container">
+          <button
+            className="toggle-sidebar-button closed-sidebar-button"
+            onClick={onToggleSidebar}
+            aria-label="Open chat sidebar"
+            title="Open sidebar"
+          >
+            <img 
+              src="/menu-icon.svg" 
+              alt="Menu" 
+              className="menu-icon" 
+            />
+          </button>
+          <img 
+            src="/logo.svg" 
+            alt="Logo" 
+            className="sidebar-logo closed-sidebar-logo" 
+            style={{ 
+              height: '64px', // Kleinere Grösse
+              marginLeft: '32px' // Weniger Abstand
+            }} 
+          />
+        </div>
       )}
 
       <div className={`chat-sidebar ${isOpen ? "open" : "closed"}`}>
         <div className="sidebar-header">
-          <h2>Chats</h2>
-
-          {/* Toggle-Button nur innerhalb der geöffneten Sidebar */}
-          {isOpen && (
+          <div className="sidebar-header-left">
             <button
-              className="sidebar-close-button"
+              className="toggle-sidebar-button"
               onClick={onToggleSidebar}
               aria-label="Close chat sidebar"
               title="Close sidebar"
             >
-              ×
+              <img 
+                src="/menu-icon.svg" 
+                alt="Menu" 
+                className="menu-icon" 
+              />
             </button>
-          )}
+            <h2>Chats</h2>
+          </div>
         </div>
-
+        
+        {/* Rest des Sidebar-Inhalts bleibt unverändert */}
         {/* Button zum Erstellen eines neuen Chats */}
         <button
           className="create-chat-button"
@@ -173,6 +191,17 @@ const ChatSidebar = ({
           ))}
         </div>
       </div>
+
+      {/* Füge das Logo in einer festen Position ausserhalb der Sidebar hinzu */}
+      {isOpen && (
+        <div className="fixed-logo-container">
+          <img 
+            src="/logo.svg" 
+            alt="Logo" 
+            className="sidebar-logo fixed-logo" 
+          />
+        </div>
+      )}
     </>
   );
 };

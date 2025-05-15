@@ -1,19 +1,26 @@
 /* Globale Variablen */
 :root {
   /* Moderne Farbpalette */
-  --primary: #3b82f6;
-  --primary-dark: #1d4ed8;
-  --primary-light: #60a5fa;
-  --secondary: #64748b;
+  --primary: #002068; /* RGB: 0, 32, 104 - Dunkelblau */
+  --primary-dark: #002068;/* RGB: 0, 32, 104 - Dunkelblau */
+  --primary-light: #002068 !important; /* RGB: 0, 32, 104 - Dunkelblau */
+  --secondary: #a7a8aa; /* RGB: 167, 168, 170 - Burgunderrot */
   --background: #f8fafc;
   --surface: #ffffff;
-  --border: #e2e8f0;
-  --border-black: black;
-  --text-primary: #1e293b;
-  --text-secondary: #475569;
+  --border: #002068; /* RGB: 0, 32, 104 - Dunkelblau */
+  --border-black: #002068; /* RGB: 0, 32, 104 - Dunkelblau */
+  --text-primary: #002068; /* RGB: 0, 32, 104 - Dunkelblau */
+  --text-secondary: #002068; /* RGB: 0, 32, 104 - Dunkelblau */
   --success: #10b981;
   --error: #ef4444;
   --warning: #f59e0b;
+
+  /* Neue Akzentfarben */
+  --accent-1: #002068;  /* RGB: 0, 32, 104 - Dunkelblau */
+  --accent-2: #ff585d;  /* RGB: 255, 88, 93 - Orange-Rot */
+  --accent-3: #ffc100;  /* RGB: 255, 193, 0 - Gold */
+  --accent-4: #a7a8aa;  /* RGB: 167, 168, 170 - Burgunderrot */
+  --accent-5: #d0d0d0;  /* RGB: 208, 208, 208 - Grau */
 
   /* Abstände */
   --spacing-xs: 0.25rem;
@@ -69,7 +76,7 @@ body,
 }
 
 .text-secondary {
-  color: var(--text-secondary);
+  color: var(--text-primary);
 }
 
 .bg-surface {

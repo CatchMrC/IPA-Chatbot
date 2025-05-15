@@ -322,7 +322,7 @@ const Chat = () => {
         {
           id: Date.now(),
           type: "system",
-          content: `Ausgewähltes Produkt: ${
+          content: `Selected Product: ${
             product.header?.type || product.type
           } - ${productName}`,
         },
@@ -350,7 +350,7 @@ const Chat = () => {
         {
           id: Date.now(),
           type: "system",
-          content: `Produktauswahl aufgehoben: ${
+          content: `Product deselected: ${
             prevProduct.header?.type || prevProduct.type
           } - ${productName}`,
         },
