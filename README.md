@@ -55,7 +55,7 @@ ipa-chatbot/
 
 1. **Repository klonen:**
    ```bash
-   git clone https://github.com/CatchMrC/it-hardware-chatbot.git
+   git clone https://github.com/CatchMrC/IPA-Chabot.git
    cd IPA-chatbot
    ```
 
